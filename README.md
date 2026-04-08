@@ -2,6 +2,17 @@
 
 A full-stack web application with React frontend, Node.js/Express backend, MongoDB database, and WebSocket real-time search.
 
+## Deployment
+
+- Frontend deployed on Vercel
+- Backend deployed on Render
+
+## Live URLs
+
+- Frontend: https://nodoubt-ass-frontend11.vercel.app
+- Backend API: https://nodoubt-ass.onrender.com
+- Backend WebSocket: wss://nodoubt-ass.onrender.com
+
 ## How to Run Locally
 
 ### Prerequisites
