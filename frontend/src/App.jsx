@@ -12,10 +12,16 @@ export default function App() {
   const wsRef = useRef(null)
 
   const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000'
-  const WS_URL = import.meta.env.VITE_WS_URL || 'ws://localhost:5000'
+  const WS_URL = (import.meta.env.VITE_WS_URL || '').trim()
+  const enableWebSocket = Boolean(WS_URL)
 
   // Initialize WebSocket connection
   useEffect(() => {
+    if (!enableWebSocket) {
+      setIsConnected(false)
+      return
+    }
+
     const connectWebSocket = () => {
       try {
         wsRef.current = new WebSocket(WS_URL)
@@ -57,7 +63,7 @@ export default function App() {
         wsRef.current.close()
       }
     }
-  }, [WS_URL])
+  }, [WS_URL, enableWebSocket])
 
   // Fetch posts on mount
   useEffect(() => {
