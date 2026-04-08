@@ -2,13 +2,6 @@
 
 A full-stack web application with React frontend, Node.js/Express backend, MongoDB database, and WebSocket real-time search.
 
-## Quick Start (Windows)
-
-Simply double-click `start.bat` in the project root directory. This will:
-1. Start the backend server (Port 5000)
-2. Start the frontend server (Port 3000)
-3. Open the application in your browser
-
 ## How to Run Locally
 
 ### Prerequisites
